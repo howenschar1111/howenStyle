@@ -1,0 +1,30 @@
+{
+  "name": "@howenschar1111/styles",
+  "version": "1.0.2",
+  "description": "Shared style system for Schedule Arranger - CSS design tokens, base styles, and component styles",
+  "main": "./dist/index.css",
+  "type": "module",
+  "scripts": {
+    "build": "postcss _index.css -o dist/index.css",
+    "build:prod": "postcss _index.css -o dist/index.css --env production",
+    "watch": "postcss _index.css -o dist/index.css --watch"
+  },
+  "keywords": [
+    "css",
+    "design-system",
+    "styles",
+    "components"
+  ],
+  "author": "howenschar1111",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.0"
+  }
+}

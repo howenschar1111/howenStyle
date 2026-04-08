@@ -1,0 +1,161 @@
+/**
+ * Button Component Styles
+ * Schedule Arranger Style System
+ */
+
+/* ==================== Base Button ==================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 10px var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  background: var(--bg-color);
+}
+
+/* ==================== Button Variants ==================== */
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+  color: var(--white);
+  box-shadow: 0 8px 20px -4px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5558e3 0%, #4338ca 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px -4px rgba(99, 102, 241, 0.5);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-light);
+  padding: 10px 20px;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-light);
+  color: var(--text-color);
+}
+
+.btn-danger {
+  background: var(--danger-color);
+  color: var(--white);
+}
+
+.btn-danger:hover {
+  background: var(--danger-color);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-slate-600);
+}
+
+.btn-ghost:hover {
+  background: var(--color-slate-100);
+  color: var(--color-slate-700);
+}
+
+/* ==================== Button Sizes ==================== */
+
+.btn-sm {
+  padding: 6px var(--space-3);
+  font-size: var(--font-size-xs);
+}
+
+.btn-lg {
+  padding: 12px var(--space-6);
+  font-size: var(--font-size-md);
+}
+
+/* ==================== Icon Button ==================== */
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+}
+
+/* ==================== Special Buttons ==================== */
+
+/* AI Reschedule Button */
+.btn-reschedule {
+  position: relative;
+  width: 100%;
+  padding: 10px var(--space-4);
+  background: linear-gradient(to right, #7c3aed, var(--color-primary-600));
+  color: white;
+  border: none;
+  border-radius: var(--radius-xl);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(124, 58, 237, 0.3);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.btn-reschedule:hover {
+  transform: scale(0.98);
+}
+
+.btn-reschedule:active {
+  transform: scale(0.95);
+}
+
+.btn-reschedule .btn-icon {
+  font-size: 16px;
+}
+
+/* ==================== Button with Loading ==================== */
+
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: btn-spin 0.8s linear infinite;
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}

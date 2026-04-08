@@ -1,0 +1,472 @@
+/**
+ * Design Tokens - CSS Variables
+ * Schedule Arranger Style System
+ */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Inter-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Inter-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Inter-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Inter-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Inter-700.woff2') format('woff2');
+}
+
+:root {
+  /* ==================== Colors ==================== */
+
+  /* Primary Colors */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  /* Secondary Colors */
+  --color-secondary-500: #7ed321;
+  --color-secondary-600: #6bc11b;
+
+  /* Accent/Brand Colors */
+  --color-accent-amber: #f59e0b;
+  --color-accent-orange: #ea580c;
+  --color-accent-warm: #E6A74C;
+  --color-accent-warm-dark: #C78E3D;
+
+  /* Semantic Colors */
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-300: #fca5a5;
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-200: #a7f3d0;
+  --color-success-300: #6ee7b7;
+  --color-success-400: #34d399;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+
+  /* Task Type Colors */
+  --color-task-deadline: #9b59b6;
+  --color-task-urgent: #3498db;
+  --color-task-fixed: #27ae60;
+  --color-task-deadline-light: #f3e8ff;
+  --color-task-urgent-light: #dbeafe;
+  --color-task-fixed-light: #d1fae5;
+
+  /* Task Card Colors - Fixed */
+  --task-fixed-bg: #e0e7ff;
+  --task-fixed-border: #c7d2fe;
+  --task-fixed-left-border: #4f46e5;
+  --task-fixed-text: #3730a3;
+  --task-fixed-title: #312e81;
+  --task-fixed-time-bg: rgba(255, 255, 255, 0.2);
+  --task-fixed-time-color: #4f46e5;
+  --task-fixed-border-color: #c7d2fe;
+  --task-fixed-shadow: 0 25px 50px -12px rgba(79, 70, 229, 0.25);
+  --task-fixed-location: #4f46e5;
+
+  /* Task Card Colors - Urgent */
+  --task-urgent-bg: #d1fae5;
+  --task-urgent-border: #a7f3d0;
+  --task-urgent-left-border: #10b981;
+  --task-urgent-text: #065f46;
+  --task-urgent-title: #064e3b;
+  --task-urgent-time-bg: rgba(236, 253, 245, 0.5);
+  --task-urgent-time-color: #047857;
+  --task-urgent-border-color: #a7f3d0;
+  --task-urgent-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+  --task-urgent-location: #059669;
+
+  /* Task Card Colors - Deadline */
+  --task-deadline-bg: #fee2e2;
+  --task-deadline-border: #fecaca;
+  --task-deadline-left-border: #ef4444;
+  --task-deadline-text: #991b1b;
+  --task-deadline-title: #7f1d1d;
+  --task-deadline-time-bg: rgba(254, 226, 226, 0.5);
+  --task-deadline-time-color: #b91c1c;
+  --task-deadline-border-color: #fecaca;
+  --task-deadline-shadow: 0 25px 50px -12px rgba(239, 68, 68, 0.25);
+  --task-deadline-location: #dc2626;
+
+  /* Task Card Colors - Conflict */
+  --task-conflict-bg: #fffbeb;
+  --task-conflict-border: #fde68a;
+  --task-conflict-left-border: #f59e0b;
+  --task-conflict-text: #92400e;
+  --task-conflict-title: #78350f;
+  --task-conflict-time-bg: #fef3c7;
+  --task-conflict-time-color: #b45309;
+  --task-conflict-border-color: #fde68a;
+  --task-conflict-shadow: 0 25px 50px -12px rgba(245, 158, 11, 0.25);
+  --task-conflict-location: #d97706;
+
+  /* Task Card Colors - Recurring */
+  --task-recurring-bg: rgba(255, 251, 235, 0.9);
+  --task-recurring-border: rgba(253, 230, 138, 0.5);
+  --task-recurring-left-border: #f59e0b;
+  --task-recurring-text: #92400e;
+  --task-recurring-title: #78350f;
+  --task-recurring-time-bg: #fef3c7;
+  --task-recurring-time-color: #b45309;
+  --task-recurring-border-color: rgba(253, 230, 138, 0.5);
+  --task-recurring-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.1);
+  --task-recurring-location: #d97706;
+  --task-recurring-info-bg: rgba(255, 255, 255, 0.5);
+  --task-recurring-btn-bg: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --task-recurring-btn-color: white;
+
+  /* Neutral Colors - Slate */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+
+  /* ==================== Typography ==================== */
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 15px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 28px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+
+  /* ==================== Spacing ==================== */
+
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* ==================== Border Radius ==================== */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-4xl: 28px;
+  --radius-full: 9999px;
+
+  /* ==================== Shadows ==================== */
+
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-modal: 0 30px 70px -15px rgba(0, 0, 0, 0.1);
+
+  /* ==================== Transitions ==================== */
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --transition-bounce: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Primary Focus Color (shared) */
+  --color-primary-focus: rgba(99, 102, 241, 0.1);
+  --color-primary-focus-strong: rgba(99, 102, 241, 0.15);
+
+  /* ==================== Z-Index ==================== */
+
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-modal-backdrop: 100;
+  --z-modal: 1000;
+  --z-toast: 1000;
+
+  /* ==================== Legacy Aliases (light theme - matches original index.css) ==================== */
+
+  --primary-color: #6366F1;
+  --primary-hover: #4338CA;
+  --primary-glow: rgba(99, 102, 241, 0.15);
+  --secondary-color: #7ed321;
+  --danger-color: #e74c3c;
+  --warning-color: #f5a623;
+  --success-color: #10b981;
+  --text-color: #334155;
+  --text-light: #64748b;
+  --text-disabled: #94a3b8;
+  --bg-color: #F8FAFC;
+  --bg-light: #F8FAFC;
+  --white: #ffffff;
+  --border-color: #e2e8f0;
+  --border-slate: #cbd5e1;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --modal-header-bg: rgba(255, 255, 255, 0.9);
+  --modal-footer-bg: rgba(255, 255, 255, 0.9);
+
+  /* Task Type Colors */
+  --task-deadline: #9b59b6;
+  --task-urgent: #3498db;
+  --task-fixed: #27ae60;
+}
+
+/* ==================== Light Theme (explicit) ==================== */
+
+:root.light,
+:root:not([data-theme="system"]) {
+  --primary-color: #6366F1;
+  --primary-hover: #4338CA;
+  --primary-glow: rgba(99, 102, 241, 0.15);
+  --secondary-color: #7ed321;
+  --danger-color: #e74c3c;
+  --warning-color: #f5a623;
+  --success-color: #10b981;
+  --text-color: #334155;
+  --text-light: #64748b;
+  --text-disabled: #94a3b8;
+  --bg-color: #F8FAFC;
+  --bg-light: #F8FAFC;
+  --white: #ffffff;
+  --border-color: #e2e8f0;
+  --border-slate: #cbd5e1;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --modal-header-bg: rgba(255, 255, 255, 0.9);
+  --modal-footer-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* ==================== Dark Theme ==================== */
+
+:root.dark {
+  --primary-color: #818cf8;
+  --primary-hover: #6366f1;
+  --primary-glow: rgba(129, 140, 248, 0.2);
+  --secondary-color: #84cc16;
+  --danger-color: #f87171;
+  --warning-color: #fbbf24;
+  --success-color: #34d399;
+  --text-color: #e2e8f0;
+  --text-light: #94a3b8;
+  --text-disabled: #64748b;
+  --bg-color: #0f172a;
+  --bg-light: #1e293b;
+  --white: #334155;
+  --bg-white: #0f172a;
+  --border-color: #334155;
+  --border-slate: #475569;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --modal-header-bg: rgba(51, 65, 85, 0.9);
+  --modal-footer-bg: rgba(51, 65, 85, 0.9);
+
+  /* Task Card Colors - Fixed (Dark) */
+  --task-fixed-bg: #1e293b;
+  --task-fixed-border: #334155;
+  --task-fixed-left-border: #818cf8;
+  --task-fixed-text: #c7d2fe;
+  --task-fixed-title: #e0e7ff;
+  --task-fixed-time-bg: rgba(99, 102, 241, 0.2);
+  --task-fixed-time-color: #a5b4fc;
+  --task-fixed-border-color: #334155;
+  --task-fixed-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --task-fixed-location: #818cf8;
+
+  /* Task Card Colors - Urgent (Dark) */
+  --task-urgent-bg: #064e3b;
+  --task-urgent-border: #065f46;
+  --task-urgent-left-border: #34d399;
+  --task-urgent-text: #6ee7b7;
+  --task-urgent-title: #a7f3d0;
+  --task-urgent-time-bg: rgba(16, 185, 129, 0.2);
+  --task-urgent-time-color: #34d399;
+  --task-urgent-border-color: #065f46;
+  --task-urgent-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --task-urgent-location: #34d399;
+
+  /* Task Card Colors - Deadline (Dark) */
+  --task-deadline-bg: #7f1d1d;
+  --task-deadline-border: #991b1b;
+  --task-deadline-left-border: #f87171;
+  --task-deadline-text: #fecaca;
+  --task-deadline-title: #fee2e2;
+  --task-deadline-time-bg: rgba(239, 68, 68, 0.2);
+  --task-deadline-time-color: #f87171;
+  --task-deadline-border-color: #991b1b;
+  --task-deadline-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --task-deadline-location: #f87171;
+
+  /* Task Card Colors - Conflict (Dark) */
+  --task-conflict-bg: #78350f;
+  --task-conflict-border: #92400e;
+  --task-conflict-left-border: #fbbf24;
+  --task-conflict-text: #fde68a;
+  --task-conflict-title: #fef3c7;
+  --task-conflict-time-bg: rgba(245, 158, 11, 0.2);
+  --task-conflict-time-color: #fbbf24;
+  --task-conflict-border-color: #92400e;
+  --task-conflict-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --task-conflict-location: #fbbf24;
+
+  /* Task Card Colors - Recurring (Dark) */
+  --task-recurring-bg: rgba(30, 41, 59, 0.9);
+  --task-recurring-border: rgba(71, 85, 105, 0.5);
+  --task-recurring-left-border: #fbbf24;
+  --task-recurring-text: #fde68a;
+  --task-recurring-title: #fef3c7;
+  --task-recurring-time-bg: rgba(245, 158, 11, 0.2);
+  --task-recurring-time-color: #fbbf24;
+  --task-recurring-border-color: rgba(71, 85, 105, 0.5);
+  --task-recurring-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  --task-recurring-location: #fbbf24;
+  --task-recurring-info-bg: rgba(51, 65, 85, 0.5);
+  --task-recurring-btn-bg: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  --task-recurring-btn-color: #0f172a;
+}
+
+/* ==================== System Theme (prefers-color-scheme) ==================== */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary-color: #818cf8;
+    --primary-hover: #6366f1;
+    --primary-glow: rgba(129, 140, 248, 0.2);
+    --secondary-color: #84cc16;
+    --danger-color: #f87171;
+    --warning-color: #fbbf24;
+    --success-color: #34d399;
+    --text-color: #e2e8f0;
+    --text-light: #94a3b8;
+    --text-disabled: #64748b;
+    --bg-color: #0f172a;
+    --bg-light: #1e293b;
+    --white: #334155;
+    --bg-white: #0f172a;
+    --border-color: #334155;
+    --border-slate: #475569;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    --modal-header-bg: rgba(51, 65, 85, 0.9);
+    --modal-footer-bg: rgba(51, 65, 85, 0.9);
+
+    /* Task Card Colors - Fixed (Dark) */
+    --task-fixed-bg: #1e293b;
+    --task-fixed-border: #334155;
+    --task-fixed-left-border: #818cf8;
+    --task-fixed-text: #c7d2fe;
+    --task-fixed-title: #e0e7ff;
+    --task-fixed-time-bg: rgba(99, 102, 241, 0.2);
+    --task-fixed-time-color: #a5b4fc;
+    --task-fixed-border-color: #334155;
+    --task-fixed-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --task-fixed-location: #818cf8;
+
+    /* Task Card Colors - Urgent (Dark) */
+    --task-urgent-bg: #064e3b;
+    --task-urgent-border: #065f46;
+    --task-urgent-left-border: #34d399;
+    --task-urgent-text: #6ee7b7;
+    --task-urgent-title: #a7f3d0;
+    --task-urgent-time-bg: rgba(16, 185, 129, 0.2);
+    --task-urgent-time-color: #34d399;
+    --task-urgent-border-color: #065f46;
+    --task-urgent-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --task-urgent-location: #34d399;
+
+    /* Task Card Colors - Deadline (Dark) */
+    --task-deadline-bg: #7f1d1d;
+    --task-deadline-border: #991b1b;
+    --task-deadline-left-border: #f87171;
+    --task-deadline-text: #fecaca;
+    --task-deadline-title: #fee2e2;
+    --task-deadline-time-bg: rgba(239, 68, 68, 0.2);
+    --task-deadline-time-color: #f87171;
+    --task-deadline-border-color: #991b1b;
+    --task-deadline-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --task-deadline-location: #f87171;
+
+    /* Task Card Colors - Conflict (Dark) */
+    --task-conflict-bg: #78350f;
+    --task-conflict-border: #92400e;
+    --task-conflict-left-border: #fbbf24;
+    --task-conflict-text: #fde68a;
+    --task-conflict-title: #fef3c7;
+    --task-conflict-time-bg: rgba(245, 158, 11, 0.2);
+    --task-conflict-time-color: #fbbf24;
+    --task-conflict-border-color: #92400e;
+    --task-conflict-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --task-conflict-location: #fbbf24;
+  }
+}

@@ -1,0 +1,156 @@
+/**
+ * Card Component Styles
+ * Schedule Arranger Style System
+ */
+
+/* ==================== Base Card ==================== */
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-slate-100);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-clickable {
+  cursor: pointer;
+}
+
+.card-clickable:hover {
+  transform: translateY(-2px);
+}
+
+/* ==================== Card Header ==================== */
+
+.card-header {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-slate-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-slate-800);
+}
+
+/* ==================== Card Body ==================== */
+
+.card-body {
+  padding: var(--space-4);
+}
+
+/* ==================== Card Footer ==================== */
+
+.card-footer {
+  padding: var(--space-4);
+  border-top: 1px solid var(--color-slate-100);
+  background: var(--color-slate-50);
+}
+
+/* ==================== Sidebar Tasks Container ==================== */
+
+.sidebar-tasks-container {
+  flex: 1;
+  background: white;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-slate-100);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== Quick Input Wrapper ==================== */
+
+.quick-input-wrapper {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 12px;
+  transition: all 0.2s;
+}
+
+.quick-input-wrapper:focus-within {
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.quick-input-container {
+  position: relative;
+}
+
+.quick-input {
+  width: 100%;
+  background: var(--bg-color);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px 10px 40px;
+  font-size: 14px;
+  outline: none;
+}
+
+.quick-input::placeholder {
+  color: var(--text-light);
+}
+
+.quick-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #818cf8;
+}
+
+/* ==================== AI Input Wrapper ==================== */
+
+.ai-input-wrapper {
+  position: relative;
+  width: 400px;
+}
+
+.ai-input {
+  width: 100%;
+  padding: 10px 16px 10px 40px;
+  background: var(--bg-light);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ai-input:focus {
+  background: var(--white);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+  width: 480px;
+  outline: none;
+}
+
+.ai-input::placeholder {
+  color: var(--text-light);
+}
+
+.ai-input-wrapper i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+}
+
+/* ==================== New Task Button ==================== */
+
+.sidebar-footer {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-slate-100);
+  background: var(--color-slate-50);
+}

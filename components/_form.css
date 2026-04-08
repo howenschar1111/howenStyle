@@ -1,0 +1,535 @@
+/**
+ * Form Component Styles
+ * Schedule Arranger Style System
+ */
+
+/* ==================== Form Group ==================== */
+
+.form-group {
+  margin-bottom: var(--space-4);
+  overflow: visible;
+  overflow-x: auto;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== Form Label ==================== */
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.form-label i {
+  font-size: 14px;
+}
+
+.form-label i.ph-text-aa { color: #818cf8; }
+.form-label i.ph-list-star { color: #f87171; }
+.form-label i.ph-clock-user { color: #fb923c; }
+.form-label i.ph-clock { color: #94a3b8; }
+.form-label i.ph-chats-teardrop { color: #818cf8; }
+.form-label i.ph-map-pin { color: #f87171; }
+.form-label i.ph-timer { color: #fb923c; }
+.form-label i.ph-calendar { color: #f87171; }
+.form-label i.ph-lock { color: #818cf8; }
+.form-label i.ph-lock-simple { color: #818cf8; }
+
+/* ==================== Form Input ==================== */
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: var(--font-size-base);
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-normal);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--white);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+.form-input::placeholder {
+  color: var(--text-light);
+}
+
+.form-input-time {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px;
+  background-color: var(--bg-color);
+  border: none;
+  border-radius: var(--radius-xl);
+  width: 100%;
+  color: var(--text-color);
+}
+
+.form-input-time:focus {
+  outline: none;
+  background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.form-input-time::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ==================== Form Row ==================== */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ==================== Form Error ==================== */
+
+.form-error {
+  padding: var(--space-3);
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-lg);
+  color: var(--danger-color);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-4);
+}
+
+/* ==================== Radio Group ==================== */
+
+.radio-group {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  margin-right: var(--space-4);
+}
+
+/* ==================== Checkbox & Radio ==================== */
+
+.checkbox-label,
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: var(--space-4);
+}
+
+.checkbox-label input,
+.radio-label input {
+  margin-right: 6px;
+}
+
+/* ==================== Task Form New ==================== */
+
+.task-form-new {
+  padding: 8px 0;
+  font-family: var(--font-sans);
+  overflow: visible;
+}
+
+.task-form-new * {
+  font-family: inherit;
+}
+
+/* ==================== Recurring Section ==================== */
+
+.recurring-section {
+  position: relative;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 32px;
+  padding: 20px 24px;
+  margin-bottom: var(--space-5);
+}
+
+.recurring-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.recurring-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.recurring-title i {
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.recurring-header-row .tab-group {
+  width: auto;
+  flex: none;
+}
+
+.recurring-tab {
+  flex: none !important;
+  padding: 6px 16px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-light);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.recurring-tab:hover {
+  color: var(--text-light);
+}
+
+.recurring-tab.active {
+  background-color: var(--white);
+  color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.recurring-panel {
+  background: var(--white);
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+}
+
+.recurring-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: var(--space-4);
+}
+
+.recurring-desc {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+  font-weight: 500;
+  line-height: 1.6;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.recurring-desc .highlight {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.recurring-interval {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  background-color: var(--bg-light);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.recurring-interval-text {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.recurring-interval .interval-value {
+  width: 24px;
+  text-align: center;
+  font-weight: 800;
+  color: var(--primary-color);
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.recurring-interval input:focus {
+  outline: none;
+}
+
+/* ==================== Weekday Selector ==================== */
+
+.weekday-selector {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.day-chip {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-light);
+  background: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.day-chip:hover {
+  border-color: #818cf8;
+}
+
+.day-chip.checked {
+  background-color: var(--primary-color);
+  border-color: transparent;
+  color: white;
+}
+
+/* ==================== Monthday Selector ==================== */
+
+.monthday-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.monthday-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.monthday-chip {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-light);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.monthday-chip:hover {
+  border-color: #818cf8;
+}
+
+.monthday-chip.checked {
+  background-color: var(--primary-color);
+  border-color: transparent;
+  color: white;
+}
+
+.monthday-hint {
+  font-size: 10px;
+  color: #818cf8;
+  font-weight: 500;
+}
+
+/* ==================== Recurring Start Date ==================== */
+
+.recurring-start-date {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(199, 210, 254, 0.5);
+}
+
+.recurring-start-date-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.recurring-start-date-label i {
+  font-size: 16px;
+  color: #f87171;
+}
+
+.recurring-start-date-input {
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: var(--white);
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.recurring-start-date-input:focus {
+  outline: none;
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.1);
+}
+
+/* ==================== Duration Selector ==================== */
+
+.duration-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.duration-input {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-light);
+  padding: 4px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  min-width: 150px;
+}
+
+.duration-input:focus-within {
+  background: var(--white);
+  border-color: #c7d2fe;
+}
+
+.duration-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-lg);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.duration-btn:hover {
+  background: var(--white);
+  color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.duration-btn:active {
+  transform: scale(0.9);
+}
+
+.duration-display {
+  display: flex;
+  align-items: baseline;
+  padding: 0 4px;
+  gap: 4px;
+}
+
+.duration-value {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+.duration-unit-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.duration-presets {
+  display: flex;
+  gap: 6px;
+  position: relative;
+  z-index: 0;
+  flex-shrink: 0;
+}
+
+.duration-preset {
+  padding: 6px 12px;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.duration-preset:hover {
+  border-color: #818cf8;
+  color: var(--primary-color);
+}
+
+.duration-preset.active,
+.filter-pill.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* ==================== Form Input Wrapper ==================== */
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-slate-400);
+  font-size: 18px;
+  transition: color var(--transition-fast);
+}
+
+.input-wrapper:focus-within .input-icon {
+  color: var(--color-primary-500);
+}
+
+.input-wrapper .form-input {
+  padding-left: 44px;
+}
