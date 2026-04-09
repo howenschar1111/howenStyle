@@ -353,6 +353,8 @@
   position: relative;
   height: 2400px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 .week-grid-times {
@@ -484,7 +486,7 @@
 .day-grid-body {
   display: flex;
   flex: 1;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .day-grid-times {
@@ -509,12 +511,11 @@
 .day-grid-slot {
   flex: 1;
   position: relative;
-  overflow-y: auto;
+  overflow: visible;
 }
 
 .day-grid-slot .week-grid-day {
   position: relative;
-  height: 2400px;
 }
 
 /* ==================== Month Grid Calendar ==================== */
@@ -782,7 +783,8 @@
   background: var(--white);
   border-radius: 24px;
   border: 1px solid var(--border-slate);
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
 }
 
@@ -970,4 +972,32 @@
 
 .filter-section {
   padding: 0 20px var(--space-4);
+}
+
+/* ==================== Mobile Calendar - Half Height ==================== */
+
+@media (max-width: 767px) {
+  .week-grid-nav {
+    display: none !important;
+  }
+
+  .week-grid-time-cell {
+    height: 50px !important;
+  }
+
+  .week-grid-day {
+    background-size: 100% 50px !important;
+  }
+
+  .week-grid-hour-line {
+    height: 50px !important;
+  }
+
+  .day-grid-time-cell {
+    height: 50px !important;
+  }
+
+  .calendar-area {
+    padding: 0 !important;
+  }
 }
