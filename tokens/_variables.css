@@ -285,8 +285,8 @@
 
 /* ==================== Light Theme (explicit) ==================== */
 
-:root.light,
-:root:not([data-theme="system"]) {
+:root[data-theme="light"],
+:root.light {
   --primary-color: #6366F1;
   --primary-hover: #4338CA;
   --primary-glow: rgba(99, 102, 241, 0.15);
@@ -310,7 +310,12 @@
 
 /* ==================== Dark Theme ==================== */
 
+:root[data-theme="dark"],
 :root.dark {
+  --color-primary-50: rgba(129, 140, 248, 0.15);
+  --color-success-50: rgba(52, 211, 153, 0.15);
+  --color-warning-50: rgba(251, 191, 36, 0.15);
+  --color-danger-50: rgba(248, 113, 113, 0.15);
   --primary-color: #818cf8;
   --primary-hover: #6366f1;
   --primary-glow: rgba(129, 140, 248, 0.2);
@@ -327,6 +332,8 @@
   --bg-white: #0f172a;
   --border-color: #334155;
   --border-slate: #475569;
+  --color-slate-50: #0f172a;
+  --color-slate-100: #1e293b;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   --modal-header-bg: rgba(51, 65, 85, 0.9);
@@ -399,7 +406,7 @@
 /* ==================== System Theme (prefers-color-scheme) ==================== */
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme]) {
     --primary-color: #818cf8;
     --primary-hover: #6366f1;
     --primary-glow: rgba(129, 140, 248, 0.2);
